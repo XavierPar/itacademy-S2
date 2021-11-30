@@ -44,9 +44,6 @@ height: 100%;
 width: 100%;
 margin-top: 2rem;
 }
-div>.btn {
-     margin: 0.625em;
-}
 
 #myTab li a {     
   border-top-style: none;
@@ -54,13 +51,37 @@ div>.btn {
     border-left-style: none;
     color:#adb5bd;
 } 
+#myTab li a:link {
+    color: #adb5bd;
+} 
 
+#myTab li a:hover {
+    color: rgb(255, 0, 0); 
+}
 #myTab li a.active {
     border-bottom-color: red;
     border-bottom-width: 0.3rem;
     color: black; 
 }
 
+//BUTTONS
+div .mybtn {
+    margin: 0.625em;
+}
+
+div .btn:link {
+    margin: 0.625em;
+}
+
+div .btn:visited {
+    margin: 0.625em;
+}
+
+div .btn:hover {
+    color: rgb(0, 0, 0);
+    background-color: #f8f9fa;
+    border-color: $primary;
+}
 //EXERCICI 3
 
 .mycard {
