@@ -1,0 +1,71 @@
+<!-- INTENT 2 de TABS-->
+
+
+    <div class="container">
+      <div class="row">
+          <div class="col-md-8">
+              <h1>
+                  Bootstrap Tabs!</h1>
+              <ul class="nav nav-tabs" id="myTab">
+                  <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+                  <li><a href="#profile" data-toggle="tab">Profile</a></li>
+                  <li><a href="#messages" data-toggle="tab">Messages</a></li>
+                  <li><a href="#settings" data-toggle="tab">Settings</a></li>
+              </ul>
+              <div class="tab-content my-tab">
+                  <div class="tab-pane active" id="home">
+                      <div class="row">
+                          <div class="col-md-12">
+                              <h3>
+                                  Tab One</h3>
+                              <p>
+                                  is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                                  the industry's standard dummy text ever since the 1500s, when an unknown printer
+                                  took a galley of type and scrambled it to make a type specimen book.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="tab-pane" id="profile">
+                      <div class="row">
+                          <div class="col-md-12">
+                              <h3>
+                                  Tab Two</h3>
+                              <p>
+                                  is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                                  the industry's standard dummy text ever since the 1500s, when an unknown printer
+                                  took a galley of type and scrambled it to make a type specimen book.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="tab-pane" id="messages">
+                      <div class="row">
+                          <div class="col-md-12">
+                              <h3>
+                                  Tab Three</h3>
+                              <p>
+                                  is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                                  the industry's standard dummy text ever since the 1500s, when an unknown printer
+                                  took a galley of type and scrambled it to make a type specimen book.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="tab-pane" id="settings">
+                      <div class="row">
+                          <div class="col-md-12">
+                              <h3>
+                                  Tab Four</h3>
+                              <p>
+                                  is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                                  the industry's standard dummy text ever since the 1500s, when an unknown printer
+                                  took a galley of type and scrambled it to make a type specimen book.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
