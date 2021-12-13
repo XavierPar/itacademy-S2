@@ -2,8 +2,19 @@ p {
   color: #adb5bd;
 }
 
-body > div {
+body div {
   margin-top: 2em;
+}
+
+div button.btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+div button.btn:active:focus {
+  border-style: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .shadow-right {
@@ -14,14 +25,43 @@ body > div {
   width: 35rem;
   margin-bottom: 6em;
   left: 10rem;
+  z-index: 2;
+}
+
+.hero-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
 }
 
 .first-img {
-  position: relative;
   top: 0rem;
-  height: 120%;
-  width: 100%;
+  width: 25em;
   margin-top: 2rem;
+}
+
+.shadow1 {
+  background-color: #5265E1;
+  z-index: -1;
+  border-bottom-left-radius: 5em;
+  margin-top: 7em;
+  margin-left: 28em;
+  position: absolute;
+  height: 12em;
+  width: 50em;
+}
+
+.navbar-light .navbar-nav .nav-link.myNavlink:hover {
+  color: red;
+}
+
+.nav-item .btn-danger .mybtn-danger:hover {
+  color: black;
+  background-color: #f8f9fa;
 }
 
 .shadow-left {
@@ -39,10 +79,6 @@ body > div {
   margin-top: 2rem;
 }
 
-div > .btn {
-  margin: 0.625em;
-}
-
 #myTab li a {
   border-top-style: none;
   border-right-style: none;
@@ -50,10 +86,42 @@ div > .btn {
   color: #adb5bd;
 }
 
+#myTab li a:link {
+  color: #adb5bd;
+}
+
+#myTab li a:hover {
+  color: red;
+}
+
 #myTab li a.active {
   border-bottom-color: red;
   border-bottom-width: 0.3rem;
   color: black;
+}
+
+div .mybtn {
+  margin: 0.625em;
+}
+
+div .mybtn:link {
+  margin: 0.625em;
+}
+
+div .mybtn:visited {
+  margin: 0.625em;
+}
+
+div .mybtn:hover {
+  color: black;
+  background-color: #f8f9fa;
+  border-color: #5265E1;
+}
+
+div .mybtn2:hover {
+  color: black;
+  background-color: #f8f9fa;
+  border-color: black;
 }
 
 .mycard {
@@ -68,12 +136,56 @@ div > .btn {
       align-self: center;
 }
 
+.row > .chrome-card, .firefox-card, .opera-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .row .firefox-card {
   margin-top: 3rem;
 }
 
 .row .opera-card {
   margin-top: 6rem;
+}
+
+.accordion-header .accordion-button {
+  border-top: solid #adb5bd 0.0125rem;
+  color: black;
+}
+
+.accordion-button:hover {
+  color: red;
+}
+
+.accordion-header .accordion-button:focus {
+  color: black;
+  border-style: none;
+  border-top: solid #adb5bd 0.0125rem;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: white;
+}
+
+.accordion-button:not(.collapsed)::after {
+  color: red;
+  background-color: white;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ff0000'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
+.accordion .accordion-item {
+  border: none;
 }
 
 /*!

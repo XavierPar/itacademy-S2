@@ -2,14 +2,24 @@
 $primary:  #5265E1;
 $secondary: #FA5959;
 
+
 // RAW CSS
 p {
     color:#adb5bd;
 }
 
-body>div {
+body div {
     margin-top:2em;
 }
+div button.btn:focus { //sacar  el box-shadow y borde cuando los botones estan en focus
+    box-shadow:none;
+}
+div button.btn:active:focus { //sacar  el box-shadow y borde cuando los botones estan en activos y en focus, se ve que el combo de focus y active tiene una llamada diferente que focus o active por separado
+    border-style: none;
+    box-shadow:none;
+}
+
+
 
 //EXERCICI 1
 .shadow-right{
@@ -19,32 +29,57 @@ body>div {
     width:35rem;
     margin-bottom: 6em; 
     left: 10rem; 
+    z-index: 2;
+}
+
+.hero-container {
+    display:flex;
+    justify-content:center;
+    z-index: 1;
 }
 
 .first-img{
-      
-    position:relative; 
     top: 0rem;
-    height: 120%;
-    width: 100%;
+    width: 25em;
     margin-top: 2rem;
 }
 
+.shadow1 {
+    background-color: $primary;
+    z-index: -1;
+    border-bottom-left-radius:5em;
+    margin-top: 7em;
+    margin-left: 28em;
+    position: absolute;
+    height:12em; 
+    width:50em;
+}
+
+//MENU BUTTONS
+.navbar-light .navbar-nav .nav-link.myNavlink:hover {
+    color: rgb(255, 0, 0); 
+}
+
+.nav-item .btn-danger .mybtn-danger:hover {
+    color: rgb(0, 0, 0);
+    background-color: #f8f9fa;
+}
+
 //EXERCICI 2
-.shadow-left{
+.shadow-left{ // uso una sombra para crear el color
     box-shadow: -12em 3em 0em 0em $primary;
     border-bottom-right-radius: 5em;
     margin-bottom: 6em; 
 }
 
 .tab-img{
-right:1.5rem;    
+right:1.5rem;   //bootstrap crea esta distancia de base con cualquier imagen para dar consistencia y hayq ue eliminarla para que su sombra se ajuste a su contorno. 
 position: relative;
 height: 100%;
 width: 100%;
 margin-top: 2rem;
 }
-
+//in this part i could, before, change the appearnce of  nav links
 #myTab li a {     
   border-top-style: none;
     border-right-style: none;
@@ -65,23 +100,30 @@ margin-top: 2rem;
 }
 
 //BUTTONS
-div .mybtn {
+div .mybtn { //primero pongo link y visited porque es lo recomendado por w3schools
     margin: 0.625em;
 }
 
-div .btn:link {
+div .mybtn:link {
     margin: 0.625em;
 }
 
-div .btn:visited {
+div .mybtn:visited {
     margin: 0.625em;
 }
 
-div .btn:hover {
+div .mybtn:hover {
     color: rgb(0, 0, 0);
     background-color: #f8f9fa;
     border-color: $primary;
 }
+
+div .mybtn2:hover {
+    color: rgb(0, 0, 0);
+    background-color: #f8f9fa;
+    border-color: black;
+}
+
 //EXERCICI 3
 
 .mycard {
@@ -92,7 +134,14 @@ div .btn:hover {
     }
 }
 
-.row .firefox-card {
+.row> .chrome-card, .firefox-card, .opera-card {
+    display: flex; 
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+} 
+
+.row .firefox-card { //hace que las cartas esten cada vez más abajo
     margin-top: 3rem;
     
 }
@@ -100,6 +149,37 @@ div .btn:hover {
     margin-top: 6rem;
     
 }
+
+//EXERCICI 4: accordion
+
+.accordion-header .accordion-button {
+  border-top:solid #adb5bd 0.0125rem;
+  color:black;
+  
+    }
+    .accordion-button:hover{
+        color: red; // color rojo cuando pasas por encima
+      
+    }
+    .accordion-header .accordion-button:focus{ //evita el color azul cuando es clickado
+        color:black;
+        border-style:none;
+        border-top:solid #adb5bd 0.0125rem;
+        box-shadow:none;
+        background-color:white;
+    }
+    .accordion-button:not(.collapsed)::after { 
+        color: red; //texto rojo
+        background-color: white;
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ff0000'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+        //basicamente cambias el color de la flecha, explicación aquí: https://stackoverflow.com/questions/66335238/changing-the-color-arrow-in-bootstrap
+    }
+  
+.accordion .accordion-item {
+    border:none;
+}
+
+// MENU
 
 //IMPORT
 @import "../node_modules/bootstrap/scss/bootstrap";
