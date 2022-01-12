@@ -55,12 +55,12 @@ div button.btn:active:focus { //sacar  el box-shadow y borde cuando los botones 
     width:50em;
 }
 
-//MENU BUTTONS
-.navbar-light .navbar-nav .nav-link.myNavlink:hover {
+//EXERCICI 6 MENU BUTTONS
+#myNavlink:hover {
     color: rgb(255, 0, 0); 
 }
 
-.nav-item .btn-danger .mybtn-danger:hover {
+.btn-danger.mybtn-danger:hover {
     color: rgb(0, 0, 0);
     background-color: #f8f9fa;
 }
@@ -177,6 +177,26 @@ div .mybtn2:hover {
   
 .accordion .accordion-item {
     border:none;
+}
+
+// EXERCICI 5 NAVBAR
+.nav-link.NavlinkFoot{
+    color:white;
+}
+.white {
+    color: #fff;
+}
+
+#white {
+    color: #fff;
+}
+
+.fab.white:hover {
+    color: rgb(255, 0, 0); 
+}
+
+.nav-link.NavlinkFoot:hover {
+    color: rgb(255, 0, 0); 
 }
 
 // MENU

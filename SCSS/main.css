@@ -55,11 +55,11 @@ div button.btn:active:focus {
   width: 50em;
 }
 
-.navbar-light .navbar-nav .nav-link.myNavlink:hover {
+#myNavlink:hover {
   color: red;
 }
 
-.nav-item .btn-danger .mybtn-danger:hover {
+.btn-danger.mybtn-danger:hover {
   color: black;
   background-color: #f8f9fa;
 }
@@ -186,6 +186,26 @@ div .mybtn2:hover {
 
 .accordion .accordion-item {
   border: none;
+}
+
+.nav-link.NavlinkFoot {
+  color: white;
+}
+
+.white {
+  color: #fff;
+}
+
+#white {
+  color: #fff;
+}
+
+.fab.white:hover {
+  color: red;
+}
+
+.nav-link.NavlinkFoot:hover {
+  color: red;
 }
 
 /*!
