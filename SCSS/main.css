@@ -1,3 +1,4 @@
+@charset "UTF-8";
 p {
   color: #adb5bd;
 }
@@ -53,15 +54,6 @@ div button.btn:active:focus {
   position: absolute;
   height: 12em;
   width: 50em;
-}
-
-#myNavlink:hover {
-  color: red;
-}
-
-.btn-danger.mybtn-danger:hover {
-  color: black;
-  background-color: #f8f9fa;
 }
 
 .shadow-left {
@@ -136,7 +128,25 @@ div .mybtn2:hover {
       align-self: center;
 }
 
-.row > .chrome-card, .firefox-card, .opera-card {
+/*  
+//ANTIGA FORMA SENSE nth:child
+.row> .chrome-card, .firefox-card, .opera-card {
+    display: flex; 
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+} 
+
+.row .firefox-card { //hace que las cartas esten cada vez más abajo
+    margin-top: 3rem;
+    
+}
+.row .opera-card {
+    margin-top: 6rem;
+    
+} 
+*/
+.row > .cardsPosition {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -152,11 +162,11 @@ div .mybtn2:hover {
           justify-content: center;
 }
 
-.row .firefox-card {
+.row > .cardsPosition:nth-child(2) {
   margin-top: 3rem;
 }
 
-.row .opera-card {
+.row > .cardsPosition:nth-child(3) {
   margin-top: 6rem;
 }
 
@@ -190,6 +200,9 @@ div .mybtn2:hover {
 
 .nav-link.NavlinkFoot {
   color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .white {
@@ -206,6 +219,15 @@ div .mybtn2:hover {
 
 .nav-link.NavlinkFoot:hover {
   color: red;
+}
+
+#myNavlink:hover {
+  color: red;
+}
+
+.btn-danger.mybtn-danger:hover {
+  color: red;
+  background-color: #f8f9fa;
 }
 
 /*!

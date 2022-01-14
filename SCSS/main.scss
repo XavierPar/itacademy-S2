@@ -55,15 +55,6 @@ div button.btn:active:focus { //sacar  el box-shadow y borde cuando los botones 
     width:50em;
 }
 
-//EXERCICI 6 MENU BUTTONS
-#myNavlink:hover {
-    color: rgb(255, 0, 0); 
-}
-
-.btn-danger.mybtn-danger:hover {
-    color: rgb(0, 0, 0);
-    background-color: #f8f9fa;
-}
 
 //EXERCICI 2
 .shadow-left{ // uso una sombra para crear el color
@@ -133,7 +124,8 @@ div .mybtn2:hover {
         align-self: center;
     }
 }
-
+/*  
+//ANTIGA FORMA SENSE nth:child
 .row> .chrome-card, .firefox-card, .opera-card {
     display: flex; 
     flex-direction:column;
@@ -148,7 +140,20 @@ div .mybtn2:hover {
 .row .opera-card {
     margin-top: 6rem;
     
-}
+} 
+*/
+.row> .cardsPosition {// Exercici 7
+    display: flex; 
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    &:nth-child(2) {
+        margin-top: 3rem;
+    }
+    &:nth-child(3) {
+        margin-top: 6rem;
+    }
+} 
 
 //EXERCICI 4: accordion
 
@@ -182,6 +187,7 @@ div .mybtn2:hover {
 // EXERCICI 5 NAVBAR
 .nav-link.NavlinkFoot{
     color:white;
+    align-items:center;
 }
 .white {
     color: #fff;
@@ -193,6 +199,7 @@ div .mybtn2:hover {
 
 .fab.white:hover {
     color: rgb(255, 0, 0); 
+    
 }
 
 .nav-link.NavlinkFoot:hover {
@@ -200,6 +207,17 @@ div .mybtn2:hover {
 }
 
 // MENU
+
+//EXERCICI 6 MENU BUTTONS
+#myNavlink:hover {
+    color: rgb(255, 0, 0); 
+}
+
+.btn-danger.mybtn-danger:hover {
+    color: rgb(255, 0, 0);
+    background-color: #f8f9fa;
+}
+
 
 //IMPORT
 @import "../node_modules/bootstrap/scss/bootstrap";
